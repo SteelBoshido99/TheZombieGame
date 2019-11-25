@@ -14,14 +14,14 @@ public class GameUI : MonoBehaviour
     private void OnEnable()
     {
         Player.OnUpdateHealth += UpdateHealthBar;
-        AddScore.OnSendScore -= UpdateScore;
+        //AddScore.OnSendScore -= UpdateScore;
     }
 
 
     private void OnDisable()
     {
         Player.OnUpdateHealth -= UpdateHealthBar;
-        AddScore.OnSendScore -= UpdateScore;
+        //AddScore.OnSendScore -= UpdateScore;
     }
 
     private void UpdateHealthBar(int health)

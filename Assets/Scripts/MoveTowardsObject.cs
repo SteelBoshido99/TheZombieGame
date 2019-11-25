@@ -14,6 +14,8 @@ public class MoveTowardsObject : MonoBehaviour
         if( target != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * 0.01f);
+
+            //GetComponent<Rigidbody2D>().AddForce((transform.position - target.position) * speed * 0.01f);
         }
     }
 

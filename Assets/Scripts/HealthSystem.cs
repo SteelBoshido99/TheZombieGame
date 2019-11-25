@@ -19,7 +19,7 @@ public class HealthSystem : MonoBehaviour
         onDamaged.Invoke(health);
         
 
-        if(health < 1)
+        if(health == 0)
         {
             onDie.Invoke();
         }
