@@ -7,17 +7,23 @@ public class GameManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("GameTest");
+        SceneManager.LoadScene("ZedCrisis");
     }
+
     public void EndGame()
     {
         SceneManager.LoadScene("Game Over");
     }
+
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
     }
-
+    
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 
 
 

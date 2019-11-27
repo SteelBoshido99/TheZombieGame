@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Over.unity
     guid: 9cf12be9940679e4d80cdfcc9a91667e
   - enabled: 1
-    path: Assets/Scenes/GameTest.unity
+    path: Assets/Scenes/ZedCrisis.unity
     guid: a3098ceb4e6bcc0489c30e9a3e289e67
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 5a75c70833ea944459d7018267d21965
   m_configObjects: {}
