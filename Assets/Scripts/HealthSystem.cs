@@ -15,8 +15,10 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage (int damage)
     {
         health -= damage;
-
+        GetComponent<SpriteRenderer>().color = new Color(0.388235229f, 0.3372549f, 1f);
         onDamaged.Invoke(health);
+
+
         
 
         if(health == 0)
