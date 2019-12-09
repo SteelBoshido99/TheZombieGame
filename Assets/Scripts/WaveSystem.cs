@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class WaveSystem : MonoBehaviour
 {
-    WaveSystem[] wavePlus = new WaveSystem [10];
+       
+    public int ZomNumber;
+    public int ZomHealth;
+    public int ZomDamage;
+    public int WaveNum;
+    public int SpawnerNum;
+    int NowWave = 10;
+
+
+    public WaveSystem(int TheZomNum, int theZomHealth, int theWaveNum)
+    {
+        ZomNumber = TheZomNum;
+        ZomHealth = theZomHealth;
+        WaveNum = theWaveNum;
+    }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //void Start()
+    //{
 
-    // Update is called once per frame
-    void Update()
-    {
+    ////    WaveSystem[] NewWave = new WaveSystem[NowWave];
+    ////    NewWave[0] = 
+
+       
         
-    }
+    ////}
+
+    
 }
