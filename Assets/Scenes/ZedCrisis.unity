@@ -697,13 +697,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690435175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93, y: -1.42, z: 0}
+  m_LocalPosition: {x: -5.32, y: 1.02, z: 0}
   m_LocalScale: {x: 1.3775231, y: 1.3775231, z: 1.3775231}
   m_Children:
   - {fileID: 310077644}
   - {fileID: 451194374}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690435180
 MonoBehaviour:
@@ -1226,6 +1226,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1735431385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1735431387}
+  - component: {fileID: 1735431386}
+  m_Layer: 0
+  m_Name: Wave Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1735431386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735431385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e2e607f3392f44a61f06a2c145a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - amount: 2
+    prefab: {fileID: 6239778036372070856, guid: 3bc6d3b6044be4a46a0d5bf884787e7b,
+      type: 3}
+  - amount: 20
+    prefab: {fileID: 6239778036372070856, guid: 3bc6d3b6044be4a46a0d5bf884787e7b,
+      type: 3}
+  randomPos: 2
+  currentWaveIndex: 0
+  remaining: 0
+--- !u!4 &1735431387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735431385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.06, y: 9.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1953712186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1366,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 557373816480136515, guid: dce46f7c6b155ac4393325bed1f8eb64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 557373816480136572, guid: dce46f7c6b155ac4393325bed1f8eb64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1351,7 +1409,7 @@ PrefabInstance:
     - target: {fileID: 557373816480136572, guid: dce46f7c6b155ac4393325bed1f8eb64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 557373816480136572, guid: dce46f7c6b155ac4393325bed1f8eb64,
         type: 3}
