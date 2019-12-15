@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSystem : MonoBehaviour
 {
@@ -12,29 +13,15 @@ public class WaveSystem : MonoBehaviour
     public int currentWaveIndex = 0; // This states the number of waves 
     public int remaining = 0; // This monitors the number of zombies remaining
 
+    public int countDownTime;
+    public Text CountDown;
 
-    //public int ZomNumber;
-    //public int ZomHealth;
-    //public int ZomDamage;
-    //public int WaveNum;
-    //public int SpawnerNum;
-    //int NowWave = 10;
-
-
-    //public WaveSystem(int TheZomNum, int theZomHealth, int theWaveNum)
-    //{
-    //    ZomNumber = TheZomNum;
-    //    ZomHealth = theZomHealth;
-    //    WaveNum = theWaveNum;
-    //}
-
-
-    //Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //WaveSystem[] NewWave = new WaveSystem[NowWave];
+
         Spawn();
-     }
+        //StartCoroutine(CountDownToStart());        
+    }
 
 
     public void OnZombieKilled()
@@ -66,6 +53,31 @@ public class WaveSystem : MonoBehaviour
 
         }
     }
+
+    //IEnumerator CountDownToStart()
+    //{
+    //    while (countDownTime > 0)
+    //    {
+    //        CountDown.text = countDownTime.ToString();
+
+    //        yield return new WaitForSeconds(1f);
+
+    //        countDownTime--;
+
+    //    }
+
+    //    CountDown.text = "Survive!";
+
+    //    Spawn();
+
+    //    yield return new WaitForSeconds(1f);
+
+    //    CountDown.gameObject.SetActive(false);
+
+    //}
+
+
+
 }
 
 [System.Serializable]
