@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("ZedCrisis");
+        Time.timeScale = 1f;
     }
 
     public void EndGame()

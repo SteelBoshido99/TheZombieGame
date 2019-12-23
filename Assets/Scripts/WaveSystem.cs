@@ -18,9 +18,9 @@ public class WaveSystem : MonoBehaviour
 
     private void Start()
     {
-
+        //StartCoroutine(CountDownToStart());
         Spawn();
-        //StartCoroutine(CountDownToStart());        
+        
     }
 
 
@@ -64,13 +64,12 @@ public class WaveSystem : MonoBehaviour
 
     //        countDownTime--;
 
-    //    }
+    //    }How 
 
     //    CountDown.text = "Survive!";
 
     //    Spawn();
-
-    //    yield return new WaitForSeconds(1f);
+   
 
     //    CountDown.gameObject.SetActive(false);
 
