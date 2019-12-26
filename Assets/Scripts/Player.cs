@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             gunAnim.SetBool("isFiring", true);
+            
         }
         else
         {
