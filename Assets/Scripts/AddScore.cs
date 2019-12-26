@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AddScore : MonoBehaviour
 {
-    
-
     public int score = 10;
    
     public void AddSCore()

@@ -9,10 +9,12 @@ public class EnemySpawnedEvent : UnityEvent <Transform> { }
 public class Enemy1 : MonoBehaviour
 {
     public EnemySpawnedEvent onSpawn;
-
+   
     private void Start()
-    {
+    {      
         GameObject player = GameObject.FindWithTag("Player");
         onSpawn.Invoke (player.transform);
     }
+
+
 }

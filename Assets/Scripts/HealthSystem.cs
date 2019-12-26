@@ -11,11 +11,12 @@ public class HealthSystem : MonoBehaviour
     public int health = 10;
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
+    
+
 
     public void TakeDamage (int damage)
     {
         health -= damage;
-        GetComponent<SpriteRenderer>().color = new Color(0.388235229f, 0.3372549f, 1f);
         onDamaged.Invoke(health);
 
 
