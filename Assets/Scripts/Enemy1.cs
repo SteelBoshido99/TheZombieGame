@@ -12,7 +12,6 @@ public class Enemy1 : MonoBehaviour
    
     private void Start()
     {
-        FindObjectOfType<AudioManager>().Play("ZMoan");
         GameObject player = GameObject.FindWithTag("Player");
         onSpawn.Invoke (player.transform);
     }
