@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
         gameOverUI.SetActive(true);
         PlayerUI.SetActive(false);
         Time.timeScale = 0f;
-
+        AudioListener.pause = true;
     }
 
 

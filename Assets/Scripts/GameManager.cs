@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("ZedCrisis");
         Time.timeScale = 1f;
+        AudioListener.pause = false;
     }
 
     public void EndGame()
