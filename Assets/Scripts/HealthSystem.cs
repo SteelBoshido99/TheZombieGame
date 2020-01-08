@@ -20,6 +20,7 @@ public class HealthSystem : MonoBehaviour
         onDamaged.Invoke(health);
 
 
+        damageIndicator();
         
 
         if(health == 0)
@@ -27,4 +28,16 @@ public class HealthSystem : MonoBehaviour
             onDie.Invoke();
         }
     }
+
+    IEnumerator damageIndicator()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(1);
+
+        GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(1);
+    }
+
+
+
 }

@@ -18,8 +18,8 @@ public class WaveSystem : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(CountDownToStart());
-        Spawn();
+        StartCoroutine(CountDownToStart());
+        //Spawn();
         
     }
 
@@ -31,7 +31,8 @@ public class WaveSystem : MonoBehaviour
         if (remaining <= 0)
         {
             currentWaveIndex++;
-            Spawn();
+            StartCoroutine(CountDownToStart());
+            //Spawn();
         }
     }
 
@@ -47,33 +48,45 @@ public class WaveSystem : MonoBehaviour
             Vector3 point = new Vector3(x, y, 0);
 
 
-            HealthSystem health =  Instantiate(waves[0].prefab, transform.position + point, transform.rotation, transform).GetComponent<HealthSystem>();
+            HealthSystem health =  Instantiate(waves[0].prefab, transform.position + 
+                                               point, transform.rotation, transform).GetComponent<HealthSystem>();
             //---The syntax above spawns in the Zombie once it gets a message from the dead zombie that it's dead---//
             health.onDie.AddListener(OnZombieKilled);
 
         }
     }
 
-    //IEnumerator CountDownToStart()
-    //{
-    //    while (countDownTime > 0)
-    //    {
-    //        CountDown.text = countDownTime.ToString();
+    IEnumerator CountDownToStart()
+    {
+        //while (countDownTime > 0)
+        //{
+        //    CountDown.text = countDownTime.ToString();
 
-    //        yield return new WaitForSeconds(1f);
+        //    yield return new WaitForSeconds(1f);
 
-    //        countDownTime--;
+        //    countDownTime--;
 
-    //    }How 
+        //}
 
-    //    CountDown.text = "Survive!";
+        CountDown.gameObject.SetActive(true);
 
-    //    Spawn();
-   
+        CountDown.text = "3";
+        yield return new WaitForSeconds(1f);
 
-    //    CountDown.gameObject.SetActive(false);
+        CountDown.text = "2";
+        yield return new WaitForSeconds(1f);
 
-    //}
+        CountDown.text = "1";
+        yield return new WaitForSeconds(1f);
+        
+        CountDown.text = "Survive!";
+
+        Spawn();
+        yield return new WaitForSeconds(1f);
+
+        CountDown.gameObject.SetActive(false);
+
+    }
 
 
 
